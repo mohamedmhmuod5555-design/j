@@ -40,7 +40,7 @@ level_code=st.text_input("ادخل كودك ")
 st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ") 
 if number is not None and number !=st.session_state.Checked :
-   st.session_state..Checked = number 
+   st.session_state.Checked = number 
    st.session_state.count += 1
    st.session_state.feed="false" 
   if number == st.session_state.Checked :
