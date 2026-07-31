@@ -50,6 +50,7 @@ if number != sc:
 if st.session_state.feed=="correct":
   st.success("انك اسطوره يا عبقري الرياضه ")
   st.balloons()
+  time.sleep(5)
   st.session_state.feed=None
   st.session_state.num1=random.randint(1,st.session_state.ran)
   st.session_state.num2=random.randint(1,st.session_state.ran)
