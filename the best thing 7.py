@@ -22,7 +22,7 @@ if 'sign' not in st.session_state:
 if 'feed' not in st.session_state:
  st.session_state.feed=0
 if 'Checked' not in st.session_state:
- st.session_state.Checked=sc
+ st.session_state.Checked= st.session_state.sc
 num1 = st.session_state.num1
 num2 = st.session_state.num2
 sign = st.session_state.sign
