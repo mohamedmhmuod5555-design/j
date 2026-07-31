@@ -10,7 +10,7 @@ if 'secret_number' not in st.session_state:
 if 'num' not in st.session_state:
   st.session_state.num=0
 if 'sc' not in st.session_state:
-  st.session_state.sc
+  st.session_state.sc=0
 if 'count' not in st.session_state:
   st.session_state.count=0
 if 'num1' not in st.session_state:
@@ -38,8 +38,7 @@ st.title("Welcome to Math Game ")
 level_code=st.text_input("ادخل كودك ")
 
 st.write(num1,sign,num2)
-number=st.number_input("ادخل النتيجه ")
-time.sleep(5) 
+number=st.number_input("ادخل النتيجه ") 
 if number == st.session_state.Checked :
    st.session_state.count += 1
    st.session_state.num += 1
