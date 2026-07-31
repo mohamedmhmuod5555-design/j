@@ -34,13 +34,20 @@ if sign=='/':
 st.title("Welcome to Math Game ")
 st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
-TOTAL_SECONDS = 15
-steps = TOTAL_SECONDS * 10  # 150 خطوة (كل خطوة بـ 0.1 ثانية لتكتمل الـ 15 ثانية الحقيقية)
-for step in range(steps, -1, -1):
-    seconds_left = step / 10
-        # تحديث عداد الوقت في نفس السطر بدقة
-    r.write(f"The time Left: **{seconds_left:.1f}**")
-    time.sleep(0.1)
+ TOTAL_TIME = 15
+ elapsed = time.time() - st.session_state.start_time
+  time_left = int(TOTAL_TIME - elapsed)
+    
+    if time_left <= 0:
+        st.session_state.game_over = True
+        st.error("🚨 انتهى الوقت!")
+        time.sleep(1)
+        st.rerun()
+    else:
+        st.metric(label="⏳ الوقت المتبقي", value=f"{time_left} ثوانٍ")
+
+# استدعاء العداد المعزول ليظهر على الشاشة
+render_timer()
     if i ==0 :
      st.write("للاسف لقد انتهي الوقت ")
      st.session_state.num =0
