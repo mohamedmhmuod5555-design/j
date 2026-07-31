@@ -21,7 +21,8 @@ if 'sign' not in st.session_state:
  st.session_state.sign=random.choice(['+','-','*','/'])
 if 'feed' not in st.session_state:
  st.session_state.feed=0
-
+if 'Checked' not in st.session_state:
+ st.session_state.Checked=0
 num1 = st.session_state.num1
 num2 = st.session_state.num2
 sign = st.session_state.sign
@@ -39,11 +40,11 @@ level_code=st.text_input("ادخل كودك ")
 st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
 time.sleep(5) 
-if number == sc:
+if number == st.session_state.Checked and == sc :
    st.session_state.count += 1
    st.session_state.num += 1
    st.session_state.feed="correct"
-if number != sc:
+if number != sc or st.session_state.Checked != number :
    st.session_state.num =0
    st.session_state.count += 1
    st.session_state.feed="false" 
