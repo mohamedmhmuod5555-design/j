@@ -39,32 +39,31 @@ level_code=st.text_input("ادخل كودك ")
 
 st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ") 
-if number == st.session_state.Checked :
+if number is not None and number !=st.session_state.Checked :
+   st.session_state..Checked = number 
+   st.session_state.count += 1
+   st.session_state.feed="false" 
+  if number == st.session_state.Checked :
    st.session_state.count += 1
    st.session_state.num += 1
    st.session_state.feed="correct"
-if number is not None and!=st.session_state.Checked :
-   st.session_state.num =0
-   st.session_state.count += 1
-   st.session_state.feed="false" 
-if st.session_state.feed=="correct":
-  st.success("انك اسطوره يا عبقري الرياضه ")
-  st.balloons()
-  time.sleep(5)
-  st.session_state.feed=None
-  st.session_state.num1=random.randint(1,st.session_state.ran)
-  st.session_state.num2=random.randint(1,st.session_state.ran)
-  st.session_state.sign=random.choice(['+','-','*','/'])
-  time.sleep(1)
-  st.rerun()
-if st.session_state.feed=="false":
-  st.error(f"اجابتك خاطئة! الإجابة الصحيحة كانت : {sc}")
-  st.session_state.feed=None
-  st.session_state.num1=random.randint(1,st.session_state.ran)
-  st.session_state.num2=random.randint(1,st.session_state.ran)
-  st.session_state.sign=random.choice(['+','-','*','/'])
-  time.sleep(1)
-  st.rerun()
+   if st.session_state.feed=="correct":
+    st.success("انك اسطوره يا عبقري الرياضه ")
+    st.balloons()
+    st.session_state.feed=None
+    st.session_state.num1=random.randint(1,st.session_state.ran)
+    st.session_state.num2=random.randint(1,st.session_state.ran)
+    st.session_state.sign=random.choice(['+','-','*','/'])
+    time.sleep(1)
+    st.rerun()
+  else:
+   st.error(f"اجابتك خاطئة! الإجابة الصحيحة كانت : {sc}")
+   st.session_state.feed=None
+   st.session_state.num1=random.randint(1,st.session_state.ran)
+   st.session_state.num2=random.randint(1,st.session_state.ran)
+   st.session_state.sign=random.choice(['+','-','*','/'])
+   time.sleep(1)
+   st.rerun()
 
 if st.session_state.num > 0 and st.session_state.num % 10 == 0:
   st.success("انت بطل! تحدي صديقك انه بالطبع لن يستطيع ان يصل لمستواك  ")
