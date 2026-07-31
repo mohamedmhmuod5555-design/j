@@ -38,7 +38,7 @@ level_code=st.text_input("ادخل كودك ")
 
 st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
- time.sleep(5) 
+time.sleep(5) 
 if number == sc:
    st.session_state.count += 1
    st.session_state.num += 1
