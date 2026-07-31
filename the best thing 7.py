@@ -36,7 +36,7 @@ st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
 r=st.empty()
 for i in range(15,-1,-1):
-  st.write("The time Left ",i)
+  r.write("The time Left ",i)
   time.sleep(1)
 
 if st.button("تأكيد التخمين "):
