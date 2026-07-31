@@ -41,7 +41,6 @@ for i in range(15,-1,-1):
   if i ==0 :
     st.write("للاسف لقد انتهي الوقت ")
     st.session_state.num =0
-    i=15
     st.session_state.num1=random.randint(1,st.session_state.ran)
     st.session_state.num2=random.randint(1,st.session_state.ran)
     st.session_state.sign=random.choice(['+','-','*','/'])
