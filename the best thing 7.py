@@ -43,7 +43,7 @@ if number == st.session_state.Checked :
    st.session_state.count += 1
    st.session_state.num += 1
    st.session_state.feed="correct"
-if number is not None and !=st.session_state.Checked :
+if number is not None and!=st.session_state.Checked :
    st.session_state.num =0
    st.session_state.count += 1
    st.session_state.feed="false" 
