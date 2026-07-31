@@ -40,7 +40,7 @@ level_code=st.text_input("ادخل كودك ")
 st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
 time.sleep(5) 
-if number == st.session_state.Checked and == sc :
+if number == st.session_state.Checked and sc :
    st.session_state.count += 1
    st.session_state.num += 1
    st.session_state.feed="correct"
