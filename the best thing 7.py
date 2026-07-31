@@ -3,10 +3,10 @@ import time
 import streamlit as st
 if 'ran' not in st.session_state or st.session_state.ran < 1:
   st.session_state.ran=20
-if 'secret_number' not in st.session_state:
-  st.session_state.secret_number=(st.session_state.level*1785/5)//8
 if 'level' not in st.session_state:
   st.session_state.level=1
+if 'secret_number' not in st.session_state:
+  st.session_state.secret_number=(level*1785/5)//8
 if 'num' not in st.session_state:
   st.session_state.num=0
 if 'sc' not in st.session_state:
