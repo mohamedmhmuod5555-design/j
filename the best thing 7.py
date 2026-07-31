@@ -4,7 +4,7 @@ import streamlit as st
 if 'ran' not in st.session_state or st.session_state.ran < 1:
   st.session_state.ran=20
 if 'level' not in st.session_state:
-  st.session_state.level=1
+  st.session_state.level
 if 'secret_number' not in st.session_state:
   st.session_state.secret_number=(st.session_state.level*1785/5)//8
 if 'num' not in st.session_state:
@@ -34,6 +34,8 @@ if sign=='*':
 if sign=='/':
  sc=num1//num2 
 st.title("Welcome to Math Game ")
+level_code=st.text_input("ادخل كودك ")
+
 st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
 if st.button("تأكيد التخمين "):
@@ -67,6 +69,7 @@ if st.session_state.num > 0 and st.session_state.num % 10 == 0:
   if st.button("الليفل التالي "):
      st.write("Your Code is ",st.session_state.secret_number) 
      st.balloons()
+     
      st.session_state.level+=1
      st.session_state.ran+=20
 st.write("your points are " ,st.session_state.num,"from",st.session_state.count,"Questions" )
