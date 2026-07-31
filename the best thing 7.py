@@ -37,6 +37,7 @@ number=st.number_input("ادخل النتيجه ")
 r=st.empty()
 for i in range(15,-1,-1):
   r.write(f"The time Left {i}")
+  time.sleep(0.1)
   if i ==0 :
     st.write("للاسف لقد انتهي الوقت ")
     st.session_state.num =0
