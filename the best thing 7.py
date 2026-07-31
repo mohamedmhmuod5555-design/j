@@ -43,7 +43,7 @@ if number == sc:
    st.session_state.count += 1
    st.session_state.num += 1
    st.session_state.feed="correct"
-else:
+if number != sc:
    st.session_state.num =0
    st.session_state.count += 1
    st.session_state.feed="false" 
