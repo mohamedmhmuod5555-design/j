@@ -41,7 +41,7 @@ for step in range(steps, -1, -1):
         # تحديث عداد الوقت في نفس السطر بدقة
     r.write(f"The time Left: **{seconds_left:.1f}**")
     time.sleep(0.1)
-  if i ==0 :
+   if i ==0 :
     st.write("للاسف لقد انتهي الوقت ")
     st.session_state.num =0
     st.session_state.num1=random.randint(1,st.session_state.ran)
