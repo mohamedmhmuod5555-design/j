@@ -36,11 +36,11 @@ st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
 TOTAL_SECONDS = 15
 steps = TOTAL_SECONDS * 10  # 150 خطوة (كل خطوة بـ 0.1 ثانية لتكتمل الـ 15 ثانية الحقيقية)
-    for step in range(steps, -1, -1):
-        seconds_left = step / 10
+for step in range(steps, -1, -1):
+    seconds_left = step / 10
         # تحديث عداد الوقت في نفس السطر بدقة
-        r.write(f"The time Left: **{seconds_left:.1f}**")
-        time.sleep(0.1)
+    r.write(f"The time Left: **{seconds_left:.1f}**")
+    time.sleep(0.1)
   if i ==0 :
     st.write("للاسف لقد انتهي الوقت ")
     st.session_state.num =0
