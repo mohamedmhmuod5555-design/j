@@ -42,11 +42,11 @@ for i in range(15,-1,-1):
     st.write("للاسف لقد انتهي الوقت ")
     st.session_state.num =0
     i=15
-   st.session_state.num1=random.randint(1,st.session_state.ran)
-   st.session_state.num2=random.randint(1,st.session_state.ran)
-   st.session_state.sign=random.choice(['+','-','*','/'])
-   time.sleep(1)
-   st.rerun()
+    st.session_state.num1=random.randint(1,st.session_state.ran)
+    st.session_state.num2=random.randint(1,st.session_state.ran)
+    st.session_state.sign=random.choice(['+','-','*','/'])
+    time.sleep(1)
+    st.rerun()
 
 
 if st.button("تأكيد التخمين "):
