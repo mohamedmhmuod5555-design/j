@@ -10,7 +10,7 @@ if 'secret_number' not in st.session_state:
 if 'num' not in st.session_state:
   st.session_state.num=0
 if 'sc' not in st.session_state:
-  st.session_state.sc=0
+  st.session_state.sc
 if 'count' not in st.session_state:
   st.session_state.count=0
 if 'num1' not in st.session_state:
@@ -22,7 +22,7 @@ if 'sign' not in st.session_state:
 if 'feed' not in st.session_state:
  st.session_state.feed=0
 if 'Checked' not in st.session_state:
- st.session_state.Checked=0
+ st.session_state.Checked=sc
 num1 = st.session_state.num1
 num2 = st.session_state.num2
 sign = st.session_state.sign
@@ -40,11 +40,11 @@ level_code=st.text_input("ادخل كودك ")
 st.write(num1,sign,num2)
 number=st.number_input("ادخل النتيجه ")
 time.sleep(5) 
-if number == st.session_state.Checked and sc :
+if number == st.session_state.Checked :
    st.session_state.count += 1
    st.session_state.num += 1
    st.session_state.feed="correct"
-if number != sc or st.session_state.Checked != number :
+if number !=st.session_state.Checked :
    st.session_state.num =0
    st.session_state.count += 1
    st.session_state.feed="false" 
